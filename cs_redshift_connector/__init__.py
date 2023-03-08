@@ -2,8 +2,19 @@ import redshift_connector
 import configparser
 import os
 
+
 configParser = configparser.RawConfigParser()
-config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'creds.txt')
+config_path = r'C:\Users\xiaolinzheng\Documents\GitHub\pricing_file_automation_cloud\cs_redshift_connector\creds.txt'
+
+print(config_path )
+
+    
+configParser.read(config_path)
+
+print(configParser)
+
+
+
 
     
 configParser.read(config_path)
