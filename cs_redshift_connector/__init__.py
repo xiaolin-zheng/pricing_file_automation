@@ -3,14 +3,10 @@ import configparser
 import os
 
 configParser = configparser.RawConfigParser()
-config_path = r'C:\Users\xiaolinzheng\creds.txt'
+config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'creds.ini')
 
-print(config_path )
-print(os.path.abspath(config_path))
     
 configParser.read(config_path)
-
-print(configParser)
 
 
 def get_conn(source='prd-gallium-redshift'):
