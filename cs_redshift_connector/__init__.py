@@ -4,7 +4,7 @@ import os
 
 
 configParser = configparser.RawConfigParser()
-config_path = r'C:\Users\xiaolinzheng\creds.ini'
+config_path = r'C:\Users\xiaolinzheng\creds.txt'
 
 print(config_path )
 
