@@ -4,9 +4,9 @@ import os
 
 
 configParser = configparser.RawConfigParser()
-config_path = r'C:\Users\xiaolinzheng\Documents\GitHub\pricing_file_automation_cloud\cs_redshift_connector\creds.txt'
+config_path = r'C:\Users\xiaolinzheng\creds.txt'
 
-print(config_path )
+print(config_path)
 
     
 configParser.read(config_path)
