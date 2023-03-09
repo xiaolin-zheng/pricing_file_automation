@@ -1,19 +1,19 @@
 import redshift_connector
 import configparser
 import os
-import sys
 
+configParser = configparser.RawConfigParser()
+config_path = r'C:\Users\xiaolinzheng\creds.txt'
 
+print(config_path )
 
     
+configParser.read(config_path)
 
-def get_conn(config_file_path, source='prd-gallium-redshift'):
+print(configParser)
 
 
-    configParser = configparser.RawConfigParser()
-
-    configParser.read(config_path)
-
+def get_conn(source='prd-gallium-redshift'):
 
     rs_credentials = dict(configParser.items(source))
     
@@ -50,13 +50,4 @@ def create_sql_list(sql_stat):
     temp_sql_list = [s.strip() for s in sql_stat.split(';')]
     temp_sql_list = list(filter(None, temp_sql_list))
     return temp_sql_list
-
-
-if len(sys.argv) > 1:
-    config_file_path = sys.argv[1]
-else:
-    config_file_path = 'path/to/config.ini'
-
-# Call the function to create a connection object
-conn = get_conn(r'C:\Users\xiaolinzheng\creds.ini')
     
