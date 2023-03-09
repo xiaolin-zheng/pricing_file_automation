@@ -6,7 +6,7 @@ configParser = configparser.RawConfigParser()
 config_path = r'C:\Users\xiaolinzheng\creds.txt'
 
 print(config_path )
-
+print(os.path.abspath(config_path))
     
 configParser.read(config_path)
 
